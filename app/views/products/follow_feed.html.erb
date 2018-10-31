@@ -11,8 +11,8 @@
 
   
   <div>
-    <% @products.each do |product| %>
-        <%= cl_image_tag(product.image.key)%>
+    <% @products.each do |product| if product  %>
+        <%= cl_image_tag(product.image.key) if product.image != nil %>
         <%= product.name%>
         <%= link_to 'Show', product %>
         <%= link_to 'Edit', edit_product_path(product) %>
