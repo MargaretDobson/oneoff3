@@ -26,6 +26,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     @product.user_id = current_user.id
+    @product.image.attach(product_params[:image])
 
     respond_to do |format|
       if @product.save
@@ -36,6 +37,7 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # PATCH/PUT /products/1
