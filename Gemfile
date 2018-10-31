@@ -5,6 +5,8 @@ ruby '2.5.1'
 
 gem "dotenv-rails", "~> 2.5", :groups => [:development, :test] 
 
+gem 'bootstrap-sass', '~> 3.3.5'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
@@ -64,3 +66,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "devise", "~> 4.5"
+
+gem "cloudinary", "~> 1.9"
