@@ -32,3 +32,9 @@ local:
 #   service: Mirror
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
+
+cloudinary:
+  service: Cloudinary
+  cloud_name: manik747
+  api_key: 132493643449183
+  api_secret: ysytrMg3QK9WF-dRJBKOtQKAtfE
