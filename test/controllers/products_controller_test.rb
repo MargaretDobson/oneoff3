@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
+
   setup do
     @product = products(:one)
   end
@@ -45,4 +46,5 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to products_url
   end
+
 end

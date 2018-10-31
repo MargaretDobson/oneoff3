@@ -6,4 +6,3 @@ class Product < ApplicationRecord
         self.user == user || user.has_role?(:admin)
     end
 end
-
