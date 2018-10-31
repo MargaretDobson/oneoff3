@@ -24,7 +24,8 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = Product.new(product_params)
+    @products = Product.new(product_params)
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @product.save
@@ -67,8 +68,13 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
     end
 
+    def check_permissions
+      if !@products.can_change?(current_user)
+        redirect_to(request.refferer || root_path, :alert => "You are not Authorised")
+      end
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.fetch(:product, {})
+      params.require(:product).permit(:name, :image)
     end
 end
