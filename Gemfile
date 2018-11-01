@@ -73,3 +73,4 @@ gem "cloudinary", "~> 1.9"
 
 
 gem "activestorage-cloudinary-service", "~> 0.2.0"
+gem "switchery-rails", "~> 0.8.1"
