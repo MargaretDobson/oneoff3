@@ -5,8 +5,6 @@ ruby '2.5.1'
 
 gem "dotenv-rails", "~> 2.5", :groups => [:development, :test] 
 
-gem "rolify", "~> 5.2"
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
@@ -68,16 +66,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "devise", "~> 4.5"
 
-
-
 gem "cloudinary", "~> 1.9"
-
-
 
 gem "activestorage-cloudinary-service", "~> 0.2.0"
 
-<<<<<<< HEAD
-=======
-
 gem "rolify", "~> 5.2"
->>>>>>> 10d96b79443734777b18df5fb8fb6af4678b54d9
+
+gem "stripe", "~> 3.29"
