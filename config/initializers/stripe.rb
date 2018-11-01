@@ -1,3 +1,5 @@
+
+#Initializer for stripe
 Rails.configuration.stripe = {
     :publishable_key => '',
     :secret_key => ''

@@ -1,7 +1,8 @@
 class ChargesController < ApplicationController
     def new
     end
-    
+    #Shows credit card form using checkout
+    #created the actual charges by calling api
     def create
       # Amount in cents
       @amount = 500
@@ -15,35 +16,12 @@ class ChargesController < ApplicationController
         :customer    => customer.id,
         :amount      => @amount,
         :description => 'Rails Stripe customer',
-        :currency    => 'usd'
+        :currency    => 'aud'
       )
     
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_charge_path
     end
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        
 end
