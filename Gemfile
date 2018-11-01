@@ -76,8 +76,4 @@ gem "cloudinary", "~> 1.9"
 
 gem "activestorage-cloudinary-service", "~> 0.2.0"
 
-<<<<<<< HEAD
-=======
-
 gem "rolify", "~> 5.2"
->>>>>>> 10d96b79443734777b18df5fb8fb6af4678b54d9
