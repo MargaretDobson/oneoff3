@@ -1,6 +1,11 @@
+
 class User < ApplicationRecord
+<<<<<<< HEAD
   #rolify <--- Has been comented out for the time being
 
+=======
+ 
+>>>>>>> stripe
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

@@ -81,5 +81,12 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:name, :image, :available, :description, :price)
 
     end
+#stripe stuff
+    def new
+    end
+
+    def create
+    end
+
 end
 
