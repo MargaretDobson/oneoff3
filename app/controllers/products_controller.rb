@@ -81,15 +81,5 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:name, :image, :available, :description, :price)
 
     end
-    
-    def toggle_available  
-      if @product.available?
-        @product.update(available: false)
-      else
-        @product.update(available: true)
-      end
-    end
-
-
 end
 
