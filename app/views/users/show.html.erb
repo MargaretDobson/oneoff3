@@ -5,11 +5,9 @@
 <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 
 
-<!-- The code below is populating all user products in the web page. -->
-<!-- The code bellow worked successfully, hope that it works well for you as well. -->
-<!-- Lots of love and good luck! -->
-<!-- Danny <3 -->
+<%= image_tag @user.image%><!-- User profile picture -->
 
+<!-- The code below is populating all user products in the web page. -->
 <div>
 <!-- @products equals to an array of all products that were made by the user-->
 <!-- product is an singular record that we extract data from. -->

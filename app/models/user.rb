@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   #rolify <--- Has been comented out for the time being
-  
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -14,5 +14,6 @@ class User < ApplicationRecord
 
   has_many :product
   has_one :address
+  has_one_attached :image # <-- This little thingy allows to load images. Love you and good luck! Danny <3
   
 end

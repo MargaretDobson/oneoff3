@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # require '../models/product'
+  
   #user profile page
   #Current asigned in user can see their web page.
   # localhost:3000/users/show
