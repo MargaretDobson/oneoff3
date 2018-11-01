@@ -5,8 +5,6 @@ ruby '2.5.1'
 
 gem "dotenv-rails", "~> 2.5", :groups => [:development, :test] 
 
-gem "rolify", "~> 5.2"
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
@@ -77,3 +75,5 @@ gem "cloudinary", "~> 1.9"
 gem "activestorage-cloudinary-service", "~> 0.2.0"
 
 gem "rolify", "~> 5.2"
+
+gem "stripe", "~> 3.29"
