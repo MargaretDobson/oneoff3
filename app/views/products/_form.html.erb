@@ -20,6 +20,20 @@
       <%= form.file_field :image%>
     </div>
 
+    <div class="field">
+      <%= form.label :description%>
+      <%= form.text_area :description%>
+    </div>
+
+    <div class="field">
+      <%= form.label :available%>
+      <%= form.check_box :available %>
+    </div>
+
+    <div class="field">
+      <%= form.label :price%>
+      <%= form.number_field :price,  :class => 'text_field' %> 
+    </div>
 
 
   <div class="actions">
