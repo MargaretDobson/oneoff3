@@ -9,11 +9,6 @@ local:
 
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
-cloudinary:
-  service: Cloudinary
-  cloud name: <%= ENV['CLOUDINARY_USER'] %>
-  api_key: <%= ENV['CLOUDINARY_KEY'] %>
-  api_secret: <%= ENV['CLOUDINARY_SECRET'] %>
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
