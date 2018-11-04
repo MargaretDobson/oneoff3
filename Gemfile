@@ -40,6 +40,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+ # Rspec testing library for dev invoirenment. Spread the love, Danny <3
+  gem 'rspec-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -70,6 +72,13 @@ gem "cloudinary", "~> 1.9"
 
 gem "activestorage-cloudinary-service", "~> 0.2.0"
 
+# Autherisation gem.
 gem "rolify", "~> 5.2"
 
 gem "stripe", "~> 3.29"
+
+# Bootstrap, make stuff look pretty. Fingers crossed! Danny <3
+gem 'bootstrap', '~> 4.1', '>= 4.1.3'
+
+# jQuery gem is needed to make boodstrap work properly. Danny <3
+gem 'jquery-rails'
