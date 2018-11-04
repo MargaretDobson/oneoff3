@@ -12,22 +12,6 @@
   
   <div>
     <% @products.each do |product| %>
-<<<<<<< HEAD
-       <h1><%=product.name%></h1>
-        <%= product.user.username %>
-        <%= cl_image_tag(product.image.key)%>
-        <%= product.description %>
-        <%if product.available == true %>
-        <%= 'Available' %>     
-        <%= product.price %>    
-        <% end %>     
-            
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
-  </div>
-
-=======
         <h1> <%= product.name %> </h2>
         <%= cl_image_tag(product.image.key)%>
         <%= product.description %> 
@@ -55,7 +39,6 @@
       <%end%>
         
     </div>  
->>>>>>> followed_feed
 <br>
 
 <%= link_to 'New Product', new_product_path %>
