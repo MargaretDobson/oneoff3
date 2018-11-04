@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :charges
   devise_for :users, :controllers => { registrations: 'registrations' }
 
-  get 'users/show'
+  
   root 'products#index'
 
   
