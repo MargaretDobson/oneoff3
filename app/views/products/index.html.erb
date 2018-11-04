@@ -12,6 +12,7 @@
   
   <div>
     <% @products.each do |product| %>
+<<<<<<< HEAD
        <h1><%=product.name%></h1>
         <%= product.user.username %>
         <%= cl_image_tag(product.image.key)%>
@@ -26,6 +27,36 @@
     <% end %>
   </div>
 
+=======
+        <h1> <%= product.name %> </h2>
+        <%= cl_image_tag(product.image.key)%>
+        <%= product.description %> 
+        <% if product.available == true %>
+          Available <%= product.price %>  
+        <% end %> 
+        <% if product.user_id == current_user.id%>
+        <%# Rolify logic for user authorisation can go here %>
+          <%= link_to 'Edit', edit_product_path(product) %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%else%>
+          <% if current_user_is_following(product.user_id, current_user.id)%>
+          <%=link_to 'Following', unfollow_user_path,
+                                  class: 'btn unfollow-button',
+                                  id: 'unfollow-button',
+                                  remote: true,
+                                  method: :post%>
+          <%else%>
+          <%= link_to 'Follow', follow_user_path(:following_id => product.user_id),
+                                  remote: true,
+                                  class: 'btn follow-button',
+                                  id: 'follow-button',
+                                  method: :post %>
+        <%end%>
+      <%end%>
+        
+    </div>  
+>>>>>>> followed_feed
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+<%end%>
