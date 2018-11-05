@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.decimal :price
       t.boolean :available
       t.string :image
+      
     end
   end
 end
