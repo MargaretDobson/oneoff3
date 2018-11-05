@@ -2,7 +2,8 @@
 
 <h1>Products</h1>
 <!-- user Sign off link -->
-<%= link_to "Log out", destroy_user_session_path, :method => :delete %> 
+<%= link_to "Log out", destroy_user_session_path, :method => :delete %>  | 
+<%= link_to 'New Product', new_product_path %>
 <table>
   <thead>
     <tr>
@@ -48,5 +49,3 @@
     <%end%>
 </div>   
 <br>
-
-<%= link_to 'New Product', new_product_path %>
