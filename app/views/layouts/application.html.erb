@@ -4,17 +4,23 @@
     <title>Oneoff3</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link rel="stylesheet" href="dist/switchery.css" />
-    <script src="dist/switchery.js"></script>
+    <%# <link rel="stylesheet" href="dist/switchery.css" />
+    <script src="dist/switchery.js"></script> %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <%# Added in from devise %>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <nav class="navbar navbar-dark bg-dark justify-content-center">
+        <h1 class="navbar-text">One-Off</h1>
+    </nav>
+    <div class="container">
+      <!-- Content here -->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+       
   </body>
 </html>

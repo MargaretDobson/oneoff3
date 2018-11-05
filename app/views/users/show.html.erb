@@ -1,0 +1,31 @@
+<h1><%= @user.name %> Profile.</h1>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+
+<div class="row">
+    <div class="col-3">
+        <div id="user-details">
+            <%= image_tag @user.image, id: "user-profile"%><!-- User profile picture -->
+            <p>Name : <%= @user.name%></p>
+            <p>Email : <%=@user.email %></p>
+            <p>Username : <%= @user.username%></p>
+            <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary"%>
+        </div>
+    </div>
+        <!-- The code below is populating all user products in the web page. -->
+    <div class="col-9">
+        <!-- @products equals to an array of all products that were made by the user-->
+        <!-- product is an singular record that we extract data from. -->
+        
+        <% @products.each do |product| %>
+            <div class="card" style="width: 30rem; margin-left: auto; margin-right: auto;">
+                <%= cl_image_tag(product.image.key, class: "card-img-top")%>
+                <div class="card-body">
+                    <h5 class="card-title"><%= product.name%></h5>
+                    <p class="card-text"><%= product.description%></p>
+                    <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
+                    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

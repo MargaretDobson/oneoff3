@@ -1,5 +1,6 @@
+
 class ProductsController < ApplicationController
-  
+  before_action :authenticate_user!
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -16,6 +17,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    p "----------Project inspect:" + @product.inspect
   end
 
   # GET /products/1/edit
@@ -81,5 +83,11 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:name, :image, :available, :description, :price)
 
     end
-end
+#stripe stuff
+    def new
+    end
 
+    def create
+    end
+
+end
