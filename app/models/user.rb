@@ -1,8 +1,13 @@
 
 class User < ApplicationRecord
+<<<<<<< HEAD
+  # rolify  <-- Link user to rolify gem (read its methods below.)
+=======
  
+>>>>>>> 21562f911467468779d02ef4f3a83b0434708409
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # Lots of Love and go0d luck! Danny <3
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
