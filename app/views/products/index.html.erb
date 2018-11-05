@@ -2,7 +2,8 @@
 
 <h1>Products</h1>
 <!-- user Sign off link -->
-<%= link_to "Log out", destroy_user_session_path, :method => :delete %> 
+<%= link_to "Log out", destroy_user_session_path, :method => :delete %>  | 
+<%= link_to 'New Product', new_product_path %>
 <table>
   <thead>
     <tr>
@@ -11,45 +12,40 @@
   </thead>
 
   <div class="row">
-        <% @products.each do |product| %>
-            <div class="card col-4" style="width: 18rem;">
-         
-            <%= cl_image_tag(product.image.key, class: "card-img-top")%>
-            <div class="card-body">
-                <h5 class="card-title"><%= product.name %> </h5>
-                <p class="card-text"><%= product.description %><p>
+    <% @products.each do |product| %>
+      <div class="card col-4" style="width: 18rem;">
+        <%= cl_image_tag(product.image.key, class: "card-img-top")%>
+        <div class="card-body">
+          <h5 class="card-title"><%= product.name %> </h5>
+          <p class="card-text"><%= product.description %><p>
             
-                <% if product.available == true %>
-                    Available <%= product.price %>  
-                <% end %>
+          <% if product.available == true %>
+            Available <%= product.price %>  
+          <% end %>
             
-                <% if product.user_id == current_user.id%>
-                    <%# Rolify logic for user authorisation can go here %>
-                    <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary"  %>
-                    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-                <%else%>
-            
-                <% if current_user_is_following(product.user_id, current_user.id)%>
-                    <%=link_to 'Following', unfollow_user_path,
+          <% if product.user_id == current_user.id%>
+            <%# Rolify logic for user authorisation can go here %>
+            <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary"  %>
+            <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          <%else%>
+            <% if current_user_is_following(product.user_id, current_user.id)%>
+              <%=link_to 'Following', unfollow_user_path,
                                   class: 'btn btn-primary',
                                   id: 'unfollow-button',
                                   remote: true,
                                   method: :post%>
-                <%else%>
-                    <%= link_to 'Follow', follow_user_path(:following_id => product.user_id),
+            <%else%>
+            <%= link_to 'Follow', follow_user_path(:following_id => product.user_id),
                                   remote: true,
                                   class: 'btn btn-primary',
                                   id: 'follow-button',
                                   method: :post %>
+            <%end%>
+          <%end%>
 
-                <%end%>
-            </div>
         </div>
-      <%end%>
-        
-    </div>  
+      </div>
+      
+    <%end%>
+</div>   
 <br>
-
-
-<%end%>
-<%= link_to 'New Product', new_product_path %>
