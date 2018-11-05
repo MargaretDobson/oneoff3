@@ -81,12 +81,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 
 group :development, :test do
-<<<<<<< HEAD
  # Rspec testing library for dev invoirenment. Spread the love, Danny <3
   gem 'rspec-rails'
-=======
-
->>>>>>> 21562f911467468779d02ef4f3a83b0434708409
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -145,12 +141,8 @@ gem "cloudinary", "~> 1.9"
 
 gem "activestorage-cloudinary-service", "~> 0.2.0"
 
-<<<<<<< HEAD
-# Autherisation gem.
-=======
 
 
->>>>>>> 21562f911467468779d02ef4f3a83b0434708409
 gem "rolify", "~> 5.2"
 
 
