@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
-    p "----------Project inspect:" + @product.inspect
+  
   end
 
   # GET /products/1/edit
@@ -84,10 +84,6 @@ class ProductsController < ApplicationController
 
     end
 #stripe stuff
-    def new
-    end
-
-    def create
-    end
+  
 
 end
