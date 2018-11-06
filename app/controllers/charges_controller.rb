@@ -5,7 +5,7 @@ class ChargesController < ApplicationController
     #created the actual charges by calling api
     def create
       # Amount in cents
-      @amount = 500
+      @amount = params[:price].to_i
     
       customer = Stripe::Customer.create(
         :email => params[:stripeEmail],
@@ -19,9 +19,19 @@ class ChargesController < ApplicationController
         :currency    => 'aud'
       )
     
+      set_available_to_false(params[:product_id])
+      redirect_to root_path
+
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_charge_path
+    end
+
+    private
+    def set_available_to_false(product_id)
+      product = Product.find(product_id)
+      product.available = false
+      product.save
     end
         
 end
