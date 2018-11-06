@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
-
+<%= link_to 'Back', root_path %>
 <p>
     <strong>Name:</strong>
     <%= @product.name %>
@@ -21,13 +20,14 @@
     <% end %>
     <%# changed amount to price (line 13) - makes more sense %>
     <label class="amount">
-      <span>Price: $</span>
+      <span>Price: $ <%= @product.price %></span>
     </label>
   </article>
-
+  <%if @product.user_id != current_user.id%>
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Selected item"
           data-amount="500"
           data-locale="auto"></script>
+  <% end %>
 <% end %>
