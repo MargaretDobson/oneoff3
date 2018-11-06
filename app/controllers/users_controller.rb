@@ -4,8 +4,7 @@ class UsersController < ApplicationController
   #Current asigned in user can see their web page.
   # localhost:3000/users/show
   #I hope that it works on your mashine as well as on mine.
-  #Lots of love and good luck!
-  #Danny <3
+
 
   def show
     #@user equals to what ever user is curently logged on. It get all of its variables

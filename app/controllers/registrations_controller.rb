@@ -1,10 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
                          #########   DANGERZONE   #########
                 #This class will overite the default devise registration controller.
-                #The only the permited paramenters will be accsepted
+                #The only the permited paramenters will be accepted
                 #I hope that this works.
-                #Lots of Love,
-                #Danny <3
+               
+                
   
     private
 
