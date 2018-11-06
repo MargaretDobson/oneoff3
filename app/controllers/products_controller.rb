@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all.order('created_at DESC')
   end
-
+  #logic for feed creating a unique user feed from other followed users
   def feed
     @products = Product.of_followed_users(current_user.following).order('created_at DESC')
   end
