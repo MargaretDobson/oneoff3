@@ -6,7 +6,11 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all.order('created_at DESC')
+  end
+
+  def feed
+    @products = Product.of_followed_users(current_user.following).order('created_at DESC')
   end
 
   # GET /products/1
