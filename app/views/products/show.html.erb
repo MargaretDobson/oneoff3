@@ -6,8 +6,28 @@
 </p>
 
 <p>
-    <%= cl_image_tag @product.image%>
+    <%= image_tag @product.image%>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%# copy pasted from views/_forms %>
+
+
+<%= form_tag charges_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <%# changed amount to price (line 13) - makes more sense %>
+    <label class="amount">
+      <span>Price: $</span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Selected item"
+          data-amount="500"
+          data-locale="auto"></script>
+<% end %>

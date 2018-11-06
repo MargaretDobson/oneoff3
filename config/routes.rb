@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   post 'products.user.username/follow_user', to: 'relationships#follow_user', as: :follow_user
-  post 'products.user.username/follow_user', to: 'relationships#unfollow_user', as: :unfollow_user
+  post 'products.user.username/unfollow_user', to: 'relationships#unfollow_user', as: :unfollow_user
   
   get 'products/feed'
   get 'users/show'
@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   
   root 'products#index'
 
-  
+  resources :conversations do
+    resources :messages
+   end
+
 end
 

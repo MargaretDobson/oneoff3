@@ -12,6 +12,6 @@ class UsersController < ApplicationController
     @user = current_user
 
     #@products now equals to an array of all product records of that user
-    @products = Product.where(user_id: current_user.id)
+    @products = Product.where(user_id: 5)
   end
 end
