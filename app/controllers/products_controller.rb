@@ -2,39 +2,39 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /products
   # GET /products.json
   def index
     @products = Product.all.order('created_at DESC')
   end
-
+  
   def feed
     @products = Product.of_followed_users(current_user.following).order('created_at DESC')
   end
-
+  
   # GET /products/1
   # GET /products/1.json
   def show
   end
-
+  
   # GET /products/new
   def new
     @product = Product.new
-  
+    
   end
-
+  
   # GET /products/1/edit
   def edit
   end
-
+  
   # POST /products
   # POST /products.json
   def create
     @product = Product.new(product_params)
     @product.user_id = current_user.id
     @product.image.attach(product_params[:image])
-
+    
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -46,7 +46,7 @@ class ProductsController < ApplicationController
     end
     
   end
-
+  
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
@@ -60,7 +60,7 @@ class ProductsController < ApplicationController
       end
     end
   end
-
+  
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
@@ -70,24 +70,24 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
-
-    def check_permissions
-      if !@products.can_change?(current_user)
-        redirect_to(request.refferer || root_path, :alert => "You are not Authorised")
-      end
-    end
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(:name, :image, :available, :description, :price)
-
-    end
-#stripe stuff
   
-
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product
+    @product = Product.find(params[:id])
+  end
+  
+  def check_permissions
+    if !@products.can_change?(current_user)
+      redirect_to(request.refferer || root_path, :alert => "You are not Authorised")
+    end
+  end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def product_params
+    params.require(:product).permit(:name, :image, :available, :description, :price)
+    
+  end
+  #stripe stuff
+  
+  
 end
