@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 
-
 ruby '2.5.1'
 
 
@@ -154,3 +153,8 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 
 # jQuery gem is needed to make boodstrap work properly. Danny <3
 gem 'jquery-rails'
+
+
+
+
+gem "mailboxer", "~> 0.15.1"
