@@ -37,7 +37,7 @@ class ChargesController < ApplicationController
 
     def add_user_balance(price)
       user = Product.find(params[:product_id]).user
-      user.balance = user.balance + params[price].to_i
+      user.balance = user.balance + price.to_i
       user.save
     end
         
