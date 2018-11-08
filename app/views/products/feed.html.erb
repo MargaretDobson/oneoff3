@@ -33,7 +33,7 @@
             <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
           <%else%>
             <% if current_user_is_following(product.user_id, current_user.id)%>
-              <%=link_to 'Following', unfollow_user_path,
+              <%=link_to 'Following', unfollow_user_path(:following_id => product.user_id),
                                   class: 'btn btn-primary',
                                   id: 'unfollow-button',
                                   remote: true,
