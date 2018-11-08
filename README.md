@@ -123,57 +123,44 @@ How does user experience the site
         	-user can change avatar
 Rough Application Flow Sketch
 
+![alt text](/MD_images/wireframe_user.png)
 
 Wireframes
+
+
+
+
+
+![alt text](/MD_images/wireframe_user.png)
+
 Root page
 
-
-
-
-
-
-
+![alt text](/MD_images/Root_page.png)
 
 Global Page / Followers Page (shared layout)
 
-
-
-
-
-
-
-
-
-
-
+![alt text](/MD_images/global_and_following.png)
 
 
 Wireframe - User’s Profile View
 
-
-
-
-
-
-
-
-
-
-
+![alt text](/MD_images/wireframe_user.png)
 
 
 Database Entity Relationship Diagrams (Plan)
 
+![alt text](/MD_images/Initial_ERD.png)
 
 Database Entity Relationship Diagrams (What we ended up with)
 
+![alt text](/MD_images/Final_ERD.png)
 
 Details of planning process.
 Our initial plan for our app was arranged by creating cards of features we want to arrange along with other tasks that we want to arrange. Code pairing was done by all three group members to create the skeleton of the app. Once this had been arranged we created a git repo and used forking workflow to work on seperate parts of the app using pull requests to merge to review and merge changes back into the pristine master branch. We completed all initial features and added more like messaging
 
+![alt text](/MD_images/Trello_board.png)
 
-
-
+![alt text](/MD_images/Git_Kraken.png)
 
 Short Answer questions
 What is the need (i.e. challenge) that you will be addressing in your project?
@@ -243,7 +230,7 @@ Provide an overview and description of your Testing process.
 
 Testing using rspec is more reliable because tests can be transported, the test we made would make sure that users were filling in the required fields and the usernames and emails weren't already in the database.
 
-
+![alt text](/MD_images/Rspec.png)
 
 Discuss and analyse requirements related to information system security.
 
