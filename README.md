@@ -24,15 +24,15 @@ Users are able to message other users socially or to organise shipping
 All users are able to post products and make them available for sale or just share what they have worked on
 
 Screenshots
-![alt text](http://MD_images/conversation.png)
+![alt text](/MD_images/conversation.png)
 
-![alt text](http://MD_images/messages.png)
+![alt text](/MD_images/messages.png)
 
-![alt text](http://MD_images/Following_feed.png)
+![alt text](/MD_images/Following_feed.png)
 
-![alt text](http://MD_images/Globa_feed.png)
+![alt text](/MD_images/Globa_feed.png)
 
-![alt text](http://MD_images/Stripe_snap_shot.png)
+![alt text](/MD_images/Stripe_snap_shot.png)
 
 Tech stack
 Ruby on Rails
