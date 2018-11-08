@@ -8,6 +8,28 @@ Forked Repos
 Danny - https://github.com/DanBytes/oneoff3
 Matt - https://github.com/Manik747/oneoff3
 
+<<<<<<< HEAD
+* Ruby version
+    2.5.1
+* Configuration
+
+* Database creation
+    PorstgreSQL
+
+* ENV Variables
+CLOUDINARY_USER=
+CLOUDINARY_KEY=
+CLOUDINARY_SECRET=
+DB_PASSWORD=
+DB_USERNAME=
+STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+
+* Deployment instructions
+    Heroku login
+    Heroku create
+    Heroku push
+=======
 Oneoff Description
 Problem definition / purpose
 
@@ -320,4 +342,5 @@ We decided to do more work on the documentation using google docs
 
 
 
+>>>>>>> a33d9e766fc62662fff732c7fafcff7e9b4593e1
 
