@@ -6,19 +6,23 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-
-* System dependencies
-
+    2.5.1
 * Configuration
 
 * Database creation
+    PorstgreSQL
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* ENV Variables
+CLOUDINARY_USER=
+CLOUDINARY_KEY=
+CLOUDINARY_SECRET=
+DB_PASSWORD=
+DB_USERNAME=
+STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
 
 * Deployment instructions
+    Heroku login
+    Heroku create
+    Heroku push
 
-* ...
