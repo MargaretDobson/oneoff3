@@ -18,13 +18,13 @@ class User < ApplicationRecord
   has_many :product
   has_one :address
   
-  def follow(user_id)
-    following_relationships.create(following_id: user_id)
-  end
+  # def follow(user_id)
+  #   following_relationships.create(following_id: user_id)
+  # end
 
-  def unfollow(user_id)
-    following_relationships.find_by(following_id: user_id).destroy
-  end
+  # def unfollow(user_id)
+  #   following_relationships.find_by(following_id: user_id).destroy
+  # end
 
   has_one_attached :image # <-- This little thingy allows to load images. Love you and good luck! Danny <3
 
