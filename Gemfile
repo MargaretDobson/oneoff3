@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'switchery-rails'
 
 
 gem "dotenv-rails", "~> 2.5", :groups => [:development, :test] 
